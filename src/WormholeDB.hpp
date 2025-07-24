@@ -1,5 +1,6 @@
 #include "multi_map_nav/wormhole_db.hpp"
 #include <iostream>
+#include <sqlite3.h>
 
 WormholeDB::WormholeDB(const std::string& path) : db_(nullptr), db_path_(path) {}
 WormholeDB::~WormholeDB() { if (db_) sqlite3_close(db_); }
